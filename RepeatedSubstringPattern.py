@@ -30,4 +30,17 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        
+        lps = [0] * len(s)
+        for i in range(1, len(s)):
+        	j = lps[i - 1]
+        	while j > 0 and s[i] != s[j]:
+        		j = lps[j - 1]
+        	if s[i] == s[j]:
+        		j = j + 1
+        	lps[i] = j
+
+        result = lps[len(s) - 1]
+        if result != 0 and (result % (len(s) - result) == 0):
+        	return True
+        else:
+        	return False
