@@ -49,4 +49,3 @@ class Solution(object):
         	result = result + "()(" + self.tree2str(root.right) + ")"
 
         return result
-
