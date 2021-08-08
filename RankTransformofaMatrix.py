@@ -47,6 +47,7 @@ m == matrix.length
 n == matrix[i].length
 1 <= m, n <= 500
 -109 <= matrix[row][col] <= 109
+    
 '''
 class Solution(object):
     def matrixRankTransform(self, matrix):
