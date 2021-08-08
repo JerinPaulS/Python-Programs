@@ -18,7 +18,7 @@ Example 2:
 Input: deck = [1,1,1,2,2,2,3,3]
 Output: false
 Explanation: No possible partition.
-Example 3:
+Example 3
 
 Input: deck = [1]
 Output: false
@@ -39,9 +39,20 @@ Constraints:
 1 <= deck.length <= 104
 0 <= deck[i] < 104
 '''
+import collections
+import functools
 class Solution(object):
     def hasGroupsSizeX(self, deck):
         """
         :type deck: List[int]
         :rtype: bool
         """
+        def get_gcd(a, b):
+            while b != 0:
+                a, b = b, a % b
+            return a
+        
+        return reduce(get_gcd, Counter(deck).values()) > 1
+
+obj = Solution()
+print(obj.hasGroupsSizeX([1,2,3,4,4,3,2,1]))
