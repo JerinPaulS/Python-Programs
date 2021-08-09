@@ -46,7 +46,7 @@ class Solution(object):
 
         for log in logs:
         	temp = log.split()
-        	if temp[0].isdigit():
+        	if temp[1].isdigit():
         		list_digits.append(log)
         	else:
         		list_alpha.append((temp[0], "".join(temp[1:])))
