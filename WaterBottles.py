@@ -51,7 +51,7 @@ class Solution(object):
         # 4 -> 1, 2 | 4 ---> 3
 
         result = 0
-        while numBottles > numExchange:
+        while numBottles >= numExchange:
         	div = numBottles // numExchange
         	bottles = div * numExchange
         	result = result + bottles
