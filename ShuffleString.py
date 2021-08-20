@@ -55,5 +55,5 @@ class Solution(object):
         	index_map[indices[index]] = s[index]
         result = ""
         for index in range(len(s)):
-        	result.append(index_map[index])
+        	result = result + (index_map[index])
         return result
