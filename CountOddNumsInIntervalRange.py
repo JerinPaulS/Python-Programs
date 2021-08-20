@@ -28,7 +28,7 @@ class Solution(object):
         :type high: int
         :rtype: int
         """
-        if low % 2 == 0 and low != 0:
-        	return (high - low) // 2
+        if high % 2 != 0 or low % 2 != 0:
+        	return (high - low) // 2 + 1
         else:
-        	return ((high - low) // 2) + 1
+        	return (high - low) // 2
