@@ -54,4 +54,4 @@ class Solution(object):
         elif isSameTree(root, subRoot):
             return True
         else:
-            return isSubtree(root.left, subRoot) or isSubtree(root.right, subRoot)
+            return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
