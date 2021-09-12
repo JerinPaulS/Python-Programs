@@ -29,35 +29,15 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         subsets = []
-        current = []
-        
+
         def generate(index, current):
         	if index >= len(nums):
         		subsets.append(current[:])
         		return
-    		current.append(nums[i])
+    		current.append(nums[index])
     		generate(index + 1, current)
     		current.pop()
     		generate(index + 1, current)
 
-        generate(0, [])        
+        generate(0, [])
         return subsets
-
-'''
-		def genetateSubsets(index, current):
-            if index >= len(nums):
-                subsets.append(current[:])
-                return
-            current.append(nums[index])
-            genetateSubsets(index + 1, current)
-            current.pop()
-            genetateSubsets(index + 1, current)
-'''
-'''
-		for mask in range(1 << len(nums)):
-			current = []
-			for index in range(len(nums)):
-				if (mask & 1 << index) > 0:
-					current.append(nums[index])
-			subset.append(current)
-'''
