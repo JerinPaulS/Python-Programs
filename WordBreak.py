@@ -44,7 +44,7 @@ class Solution(object):
 
 		for index in range(len(s) - 1, -1, -1):
 			for word in wordDict:
-				if index + len(word) <= len(s) and s[index:len(word)] == word:
+				if index + len(word) <= len(s) and s[index:index + len(word)] == word:
 					result[index] = result[index + len(word)]
 				if result[index]:
 					break
