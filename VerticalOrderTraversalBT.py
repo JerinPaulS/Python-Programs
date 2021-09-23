@@ -90,3 +90,11 @@ root.right.left = TreeNode(15)
 root.right.right = TreeNode(7)
 obj = Solution()
 print(obj.verticalTraversal(root))
+
+'''
+		3
+	   / \
+	  9   20
+	      / \
+	     15  7
+'''
