@@ -19,7 +19,7 @@ and 5.
 2) Now connect ropes of lengths 4 and 5.
 Now we have two ropes of lengths 6 and 9.
 3) Finally connect the two ropes and all
-ropes have connected.
+ropes have connected. 
 Total cost for connecting all ropes is 5
 + 9 + 15 = 29. This is the optimized cost
 for connecting ropes. Other ways of
