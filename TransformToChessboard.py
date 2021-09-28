@@ -52,7 +52,7 @@ class Solution(object):
                     total += 1
                     if i&1: odd += 1
                 elif vals[0] ^ x != (1 << n) - 1: return float('inf')
-            ans = inf 
+            ans = float('inf') 
             if len(vals) <= 2*total <= len(vals)+1: ans = min(ans, odd)
             if len(vals)-1 <= 2*total <= len(vals): ans = min(ans, total - odd)
             return ans 
@@ -64,4 +64,4 @@ class Solution(object):
                     rows[i] ^= 1 << j 
                     cols[j] ^= 1 << i
         ans = fn(rows) + fn(cols)
-        return ans if ans < inf else -1
+        return ans if ans < float('inf') else -1
