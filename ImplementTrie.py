@@ -53,7 +53,7 @@ class Trie(object):
         curr = self.root
 
         for char in word:
-        	if curr.children.has_key(char) == False:
+        	if char not in curr.children:
         		curr.children[char] = TrieNode()
         	curr = curr.children[char]
         curr.enfOfWord = True
@@ -67,7 +67,7 @@ class Trie(object):
         curr = self.root
 
         for char in word:
-        	if curr.children.has_key(char) == False:
+        	if char not in curr.children:
         		return False
         	curr = curr.children[char]
         return curr.enfOfWord
@@ -81,7 +81,7 @@ class Trie(object):
         curr = self.root
 
         for char in prefix:
-        	if curr.children.has_key(char) == False:
+        	if char not in curr.children:
         		return False
         	curr = curr.children[char]
         return True
