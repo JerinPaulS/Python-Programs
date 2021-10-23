@@ -43,9 +43,7 @@ class Node:
 
 class Solution:
     #Your Function Should return True/False
-    def isHeap(self, root):
-        #Code Here
-        def count_nodes(self, root):
+    def count_nodes(self, root):
         if root is None:
             return 0
         else:
