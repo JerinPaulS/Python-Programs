@@ -36,7 +36,7 @@ class Solution:
 	def isCircularPrime(self, n):
 		# Code here
 		def isPrime(num):
-			if num <= 2:
+			if num < 2:
 				return False
 			prime_result = [1] * (num + 1)
 			prime_result[0] = 0
@@ -45,7 +45,6 @@ class Solution:
 				if prime_result[val] == 1:
 					for index in range(val ** 2, num + 1, val):
 						prime_result[index] = 0
-			print prime_result[num]
 			if prime_result[num]:
 				return True
 			return False
@@ -57,14 +56,13 @@ class Solution:
 		while digits > 0:
 			digits = digits - 1
 			if not isPrime(int(temp)):
-				return False
+				return 0
 			rem = str(int(temp) % 10)
 			temp = str(int(temp) // 10)
 			rem = rem + ("0" * (tot - 1))
 			temp = str(int(rem) + int(temp))
-			print temp
 
-		return True
+		return 1
 
 obj = Solution()
 print(obj.isCircularPrime(101))		
