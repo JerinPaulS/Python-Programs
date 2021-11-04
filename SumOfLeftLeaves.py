@@ -40,5 +40,5 @@ class Solution:
         	dfs(node.left, 1)
         	dfs(node.right, 0)
 
-        dfs(node, 0)
+        dfs(root, 0)
         return result[0]
