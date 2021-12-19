@@ -51,12 +51,13 @@ def maxDiff(root):
     max_node = [float('-inf')]
     result = [float('-inf')]
     def dfs(node):
-    	if node is None:
-    		return
-    	result[0] = max(result[0], max_node[0] - node.data)
-    	max_node[0] = max(max_node[0], node.data)
-    	dfs(node.left)
-    	dfs(node.right)
-
+    	def dfs(node):
+        if node is None:
+            return
+        result[0] = max(result[0], max_node[0] - node.data)
+        max_node[0] = max(max_node[0], node.data)
+        dfs(node.left)
+        dfs(node.right)
+    
     dfs(root)
     return result[0]
