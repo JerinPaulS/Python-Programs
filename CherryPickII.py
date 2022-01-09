@@ -63,7 +63,7 @@ class Solution:
             		new_c1 = col1 + i
             		new_c2 = col2 + j
             		if 0 <= new_c1 < cols and 0 <= new_c2 < cols:
-            			temp = max(temp, dfs(row + 1, new_c1, new_c1))
+            			temp = max(temp, dfs(row + 1, new_c1, new_c2))
 
             result = cherries + temp
             dp[(row, col1, col2)] = result
